@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="rikkei_education_service.TermsOfUse" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:rikkei_education_service" Title="Điều Khoản Sử Dụng - Rikkei Education Service" Height="700" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" Background="#F8F9FA" Icon="/Resources/Images/icon/icon.ico">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="TitleStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#2C3E50" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0,0,0,20" />
+      </Style>
+      <Style x:Key="SectionTitleStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="#34495E" />
+        <Setter Property="Margin" Value="0,20,0,10" />
+      </Style>
+      <Style x:Key="ContentStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="#2C3E50" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Margin" Value="0,5,0,5" />
+        <Setter Property="TextBlock.LineHeight" Value="20" />
+      </Style>
+      <Style x:Key="ContactStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="#3498DB" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Margin" Value="0,5,0,5" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+      </Style>
+      <Style x:Key="ScrollViewerStyle" TargetType="{x:Type ScrollViewer}">
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="Padding" Value="20" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="0" Background="#3498DB" CornerRadius="10" Padding="20,15">
+      <StackPanel>
+        <TextBlock Text="�� ĐIỀU KHOẢN SỬ DỤNG" Style="{StaticResource TitleStyle}" Foreground="#FFFFFFFF" />
+        <TextBlock Text="(TERMS OF USE)" Style="{StaticResource TitleStyle}" Foreground="#FFFFFFFF" FontSize="18" />
+        <TextBlock Text="Ứng dụng giám sát thi cử – Rikkei Education" Style="{StaticResource ContentStyle}" Foreground="#FFFFFFFF" HorizontalAlignment="Center" FontSize="16" />
+      </StackPanel>
+    </Border>
+    <ScrollViewer Grid.Row="1" Style="{StaticResource ScrollViewerStyle}" Margin="0,20,0,0">
+      <StackPanel>
+        <TextBlock Text="1. Mục đích sử dụng" Style="{StaticResource SectionTitleStyle}" />
+        <TextBlock Text="Ứng dụng này được phát triển và cung cấp bởi Rikkei Education, nhằm phục vụ cho việc giám sát quá trình làm bài thi lập trình của sinh viên trong các kỳ kiểm tra, đánh giá." Style="{StaticResource ContentStyle}" />
+        <TextBlock Text="Ứng dụng chỉ hoạt động khi sinh viên chủ động bật, và chỉ quan sát màn hình trong thời gian làm bài để đảm bảo tính công bằng và trung thực." Style="{StaticResource ContentStyle}" />
+        <TextBlock Text="2. Cam kết về quyền riêng tư" Style="{StaticResource SectionTitleStyle}" />
+        <TextBlock Text="Rikkei Education cam kết:" Style="{StaticResource ContentStyle}" />
+        <StackPanel Margin="20,10,0,10">
+          <TextBlock Text="• Không điều khiển, truy cập hay can thiệp vào bất kỳ nội dung, dữ liệu, hay phần mềm nào ngoài phạm vi giám sát màn hình." Style="{StaticResource ContentStyle}" />
+          <TextBlock Text="• Không truy cập webcam, micro, bàn phím, tệp cá nhân hay tài khoản riêng tư trên thiết bị của sinh viên." Style="{StaticResource ContentStyle}" />
+          <TextBlock Text="• Không ghi nhận hay thu thập dữ liệu ngoài khoảng thời gian làm bài thi." Style="{StaticResource ContentStyle}" />
+          <TextBlock Text="• Không hoạt động ngầm khi không có sự cho phép từ sinh viên." Style="{StaticResource ContentStyle}" />
+        </StackPanel>
+        <TextBlock Text="3. Điều kiện hoạt động" Style="{StaticResource SectionTitleStyle}" />
+        <StackPanel Margin="20,10,0,10">
+          <TextBlock Text="• Ứng dụng chỉ khởi chạy khi sinh viên tự tay mở." Style="{StaticResource ContentStyle}" />
+          <TextBlock Text="• Sau khi kết thúc bài thi, ứng dụng sẽ dừng mọi hoạt động và không tiếp tục ghi nhận dữ liệu." Style="{StaticResource ContentStyle}" />
+          <TextBlock Text="• Sinh viên có thể gỡ cài đặt ứng dụng bất kỳ lúc nào sau kỳ thi, nếu không còn nhu cầu sử dụng." Style="{StaticResource ContentStyle}" />
+        </StackPanel>
+        <TextBlock Text="4. Trách nhiệm người dùng" Style="{StaticResource SectionTitleStyle}" />
+        <TextBlock Text="Bằng việc sử dụng ứng dụng, sinh viên xác nhận rằng đã đọc, hiểu và đồng ý với các điều khoản nêu trên. Việc sử dụng ứng dụng một cách gian lận hoặc cản trở chức năng giám sát có thể dẫn đến hình thức xử lý theo quy định đào tạo của Rikkei Education." Style="{StaticResource ContentStyle}" />
+        <TextBlock Text="5. Liên hệ" Style="{StaticResource SectionTitleStyle}" />
+        <TextBlock Text="Mọi thắc mắc, góp ý hoặc phản ánh xin vui lòng liên hệ:" Style="{StaticResource ContentStyle}" />
+        <StackPanel Margin="20,10,0,10">
+          <TextBlock Text="�� Email: support@rikkei.edu.vn" Style="{StaticResource ContactStyle}" />
+          <TextBlock Text="🌐 Website: https://rikkei.edu.vn" Style="{StaticResource ContactStyle}" />
+        </StackPanel>
+      </StackPanel>
+    </ScrollViewer>
+    <Border Grid.Row="2" Background="#ECF0F1" CornerRadius="10" Padding="20,15" Margin="0,20,0,0">
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <Button Name="AcceptButton" Content="Tôi đồng ý" Background="#27AE60" Foreground="#FFFFFFFF" FontWeight="SemiBold" Padding="30,10" Margin="0,0,20,0" Click="AcceptButton_Click" />
+        <Button Name="DeclineButton" Content="Tôi không đồng ý" Background="#E74C3C" Foreground="#FFFFFFFF" FontWeight="SemiBold" Padding="30,10" Click="DeclineButton_Click" />
+      </StackPanel>
+    </Border>
+  </Grid>
+</Window>

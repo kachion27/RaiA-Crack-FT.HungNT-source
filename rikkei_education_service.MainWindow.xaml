@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="rikkei_education_service.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rikkei_education_service"
+        Icon="/Resources/Images/icon/icon.ico"
+        Title="[CRACK RIKKEIOS] ĐÃ ĐƯỢC BẺ KHÓA TRUY CẬP | Hack Dev By Nhu Dang KOCHO Ft.Hung Nguyen"
+        Height="790" Width="900"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Background="#000000"
+        FontFamily="Consolas"
+        mc:Ignorable="d">
+
+    <FrameworkElement.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="TerminalGreen" Color="#FF00FF00" />
+            <SolidColorBrush x:Key="TerminalRed" Color="#FFFF0000" />
+            <SolidColorBrush x:Key="TerminalCyan" Color="#FF00FFFF" />
+            <SolidColorBrush x:Key="TerminalGrey" Color="#FFCCCCCC" />
+            <SolidColorBrush x:Key="TerminalDarkGrey" Color="#FF222222" />
+
+            <Style x:Key="StatusCardStyle" TargetType="{x:Type Border}">
+                <Setter Property="Background" Value="#00000000" />
+                <Setter Property="BorderBrush" Value="{StaticResource TerminalGreen}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="UIElement.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="#FF00FF00" Direction="270" ShadowDepth="0" Opacity="0.5" BlurRadius="5" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="StatusTextStyle" TargetType="{x:Type TextBlock}">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontWeight" Value="Normal" />
+                <Setter Property="Foreground" Value="{StaticResource TerminalGreen}" />
+            </Style>
+
+            <Style x:Key="SocketButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Width" Value="120" />
+                <Setter Property="Height" Value="25" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="Foreground" Value="#FFFFFFFF" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Control.Background}" BorderBrush="#FFFFFFFF" BorderThickness="1" Padding="5,2">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="LogoutButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="{StaticResource TerminalRed}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="{StaticResource TerminalRed}" />
+                <Setter Property="Foreground" Value="#FFFFFFFF" />
+                <Setter Property="Width" Value="150" />
+                <Setter Property="Height" Value="30" />
+                <Setter Property="FrameworkElement.Cursor" Value="Hand" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="Border" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </FrameworkElement.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <TextBlock Text="[ CRACK RIKKEIOS ] ĐÃ ĐƯỢC BẺ KHÓA TRUY CẬP | Hack Dev By Nhu Dang KOCHO Ft.Hung Nguyen - DONATE: MB 6807032007" 
+                       Foreground="{StaticResource TerminalCyan}" FontSize="12" HorizontalAlignment="Center" Margin="0,0,0,5" />
+            <TextBlock FontSize="28" FontWeight="Bold" Foreground="{StaticResource TerminalGreen}" HorizontalAlignment="Center" Width="586" Text="[ RIKKEI EDUCATION SERVICE - RAIA LỎ ]" />
+            <TextBlock Text="INITIATING CRACK UNLOCK SEQUENCE CRACK BY: NHU DANG KOCHO Ft.Hung Nguyen - Version: 1.0.1 [insider]" 
+                       Foreground="{StaticResource TerminalGrey}" FontSize="14" HorizontalAlignment="Center" Margin="0,5,0,0" />
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Style="{StaticResource StatusCardStyle}">
+                <StackPanel>
+                    <TextBlock Text="[ CONNECTION STATUS &amp; ACTIONS ]" FontSize="18" FontWeight="Bold" Foreground="{StaticResource TerminalCyan}" Margin="0,0,0,20" HorizontalAlignment="Left" />
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                        <TextBlock Text="TRẠNG THÁI CHUNG: " Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" VerticalAlignment="Center" />
+                        <Border Name="StatusBorder" Background="{StaticResource TerminalRed}" CornerRadius="0" Padding="5,2" Margin="5,0,0,0">
+                            <TextBlock Name="StatusText" Text="Đang Đợi Lệnh" Foreground="#FFFFFFFF" FontWeight="SemiBold" />
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,0,0,15">
+                        <TextBlock Text="KẾT NỐI HỆ THỐNG:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,5" HorizontalAlignment="Left" />
+                        <Button Name="SocketStatusButton" Content="OFLINE" Background="{StaticResource TerminalRed}" Style="{StaticResource SocketButtonStyle}" HorizontalAlignment="Left" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,0,0,20">
+                        <TextBlock Text="PROXY SERVICE (8888):" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,5" HorizontalAlignment="Left" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Button Name="ProxyStatusButton" Content="OFFLINE" Style="{StaticResource SocketButtonStyle}" Background="{StaticResource TerminalRed}" Margin="0,0,10,0" />
+                            <Button Name="RestoreProxyButton" Content="FIX_PROXY" Style="{StaticResource SocketButtonStyle}" Background="{StaticResource TerminalCyan}" Foreground="#FF000000" Click="RestoreProxyButton_Click" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Button Name="LogoutButton" Content="SIGN OUT [EXIT]" Width="150" Height="30" Background="{StaticResource TerminalRed}" Foreground="#FFFFFFFF" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="0,10,0,20"/>
+                    <TextBlock Text="DONATE: MB BANK 6807032007" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" HorizontalAlignment="Center" FontSize="14" />
+                    <Border BorderBrush="{StaticResource TerminalGreen}" BorderThickness="1" Width="189" Height="204">
+                        <Image Source="pack://application:,,,/resources/images/donata.jpg" Width="168" Height="186" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" />
+                    </Border>
+                </StackPanel>
+            </Border>
+
+            <Rectangle Grid.Column="1" Width="1" Fill="{StaticResource TerminalGreen}" Margin="20,0" VerticalAlignment="Stretch" />
+
+            <Border Grid.Column="2" Style="{StaticResource StatusCardStyle}">
+                <StackPanel>
+                    <TextBlock Text="[ STUDENT DATA PROFILE ]" FontSize="18" FontWeight="Bold" Foreground="{StaticResource TerminalCyan}" Margin="0,0,0,20" HorizontalAlignment="Left" />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                            <TextBlock Text="MÃ SINH VIÊN:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,5" />
+                            <TextBlock Text="HỌ VÀ TÊN:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,5" />
+                            <TextBlock Text="EMAIL:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,5" />
+                            <TextBlock Text="SĐT:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,5" />
+                            <TextBlock Text="SINH NGÀY:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,5" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Name="StudentCodeText" Text="N/A" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" Margin="0,0,0,5" />
+                            <TextBlock Name="FullNameText" Text="N/A" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" Margin="0,0,0,5" />
+                            <TextBlock Name="EmailText" Text="N/A" Style="{StaticResource StatusTextStyle}" Foreground="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" Margin="0,0,0,5" />
+                            <TextBlock Name="PhoneText" Text="N/A" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" Margin="0,0,0,5" />
+                            <TextBlock Name="DobText" Text="N/A" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" Margin="0,0,0,5" />
+                        </StackPanel>
+                    </Grid>
+
+                    <StackPanel Margin="0,20,0,0">
+                        <TextBlock Text="SECURITY &amp; SYSTEM IDs" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,0,15" HorizontalAlignment="Left" />
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <TextBlock Text="SYSTEM-ID:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" Width="110" />
+                            <TextBlock Name="SystemIdText" Text="N/A" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <TextBlock Text="STUDENT-ID:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" Width="110" />
+                            <TextBlock Name="StudentIdText" Text="N/A" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" Background="#111111" BorderBrush="{StaticResource TerminalGreen}" BorderThickness="1" Margin="10,15,10,0" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="LOG:" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="0,0,10,0" />
+                <TextBlock Text="VERSION: " Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" />
+                <TextBlock Name="VersionText" Text="1.4.1" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" Margin="5,0,0,0" />
+                <TextBlock Text=" | " Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGreen}" Margin="20,0" />
+                <TextBlock Text="LAST_UPDATE: " Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" />
+                <TextBlock Text="TODAY" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" Margin="5,0,0,0" />
+            </StackPanel>
+        </Border>
+        <Label Content="Donate cho 2 ae tôi đi hihi ❤️" HorizontalAlignment="Left" Margin="62,502,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Lime" Height="48" Width="290" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Image Source="pack://application:,,,/resources/images/icon.png" Stretch="Fill" Grid.Row="1" Margin="518,283,59,32"/>
+    </Grid>
+</Window>

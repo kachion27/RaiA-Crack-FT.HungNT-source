@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>rikkei_education_service</AssemblyName>
+    <OutputType>WinExe</OutputType>
+
+    <!-- Target .NET 8 trên Windows -->
+    <TargetFramework>net8.0-windows</TargetFramework>
+
+    <!-- Bật hỗ trợ WPF và WinForms -->
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <!-- Cấu hình build -->
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <!-- ============================= -->
+  <!-- 🖼️  KHAI BÁO CÁC TÀI NGUYÊN HÌNH ẢNH -->
+  <!-- ============================= -->
+  <ItemGroup>
+    <!-- Icon của app -->
+    <Resource Include="resources\images\icon\icon.ico" />
+
+    <!-- Hình ảnh trong giao diện -->
+    <Resource Include="resources\images\donata.jpg" />
+    <Resource Include="resources\images\icon.png" />
+  </ItemGroup>
+
+  <!-- ============================= -->
+  <!-- 📦  CÁC PACKAGE CẦN THIẾT -->
+  <!-- ============================= -->
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="SocketIOClient" Version="3.1.2" />
+    <PackageReference Include="Tesseract" Version="4.1.1" />
+  </ItemGroup>
+
+</Project>
