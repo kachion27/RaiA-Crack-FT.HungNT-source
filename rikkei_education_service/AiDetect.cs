@@ -307,7 +307,7 @@ public class AiDetect
 		string text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		string text2 = string.Join(", ", detectedKeywords);
 		ShowViolationNotificationWithCooldown(detectedKeywords);
-		UploadViolationToServer(detectedKeywords, contextText);
+		//UploadViolationToServer(detectedKeywords, contextText);
 	}
 
 	private Pix ConvertBitmapToPix(Bitmap bitmap)
@@ -471,92 +471,94 @@ public class AiDetect
 		}
 	}
 
-	private async Task UploadViolationToServer(List<string> detectedKeywords, string contextText)
-	{
-		try
-		{
-			List<string> keywordsToUpload = new List<string>();
-			foreach (string keyword in detectedKeywords)
-			{
-				if (ViolationTracker.CanSendReport(keyword))
-				{
-					keywordsToUpload.Add(keyword);
-				}
-			}
-			if (keywordsToUpload.Count == 0)
-			{
-				return;
-			}
-			if (!studentId.HasValue || !examId.HasValue)
-			{
-				try
-				{
-					if (mainWindow != null)
-					{
-						if (!studentId.HasValue && mainWindow.student != null && mainWindow.student.StudentId > 0)
-						{
-							studentId = mainWindow.student.StudentId;
-						}
-						if (!examId.HasValue && mainWindow.examId > 0)
-						{
-							examId = mainWindow.examId;
-						}
-					}
-				}
-				catch
-				{
-				}
-			}
-			if (string.IsNullOrEmpty(violateHost) || !studentId.HasValue || !examId.HasValue)
-			{
-				return;
-			}
-			byte[] screenshotBytes = await GetScreenshotAsync();
-			if (screenshotBytes == null)
-			{
-				return;
-			}
-			string keywordsString = string.Join(", ", keywordsToUpload);
-			string violateDescription = keywordsString;
-			await SendViolateReportToServer(violateDescription, screenshotBytes);
-			foreach (string keyword2 in keywordsToUpload)
-			{
-				ViolationTracker.MarkReportSent(keyword2);
-			}
-		}
-		catch (Exception)
-		{
-		}
-	}
+	//private async Task UploadViolationToServer(List<string> detectedKeywords, string contextText)
+	//{
+	//	//try
+	//	//{
+	//	//	List<string> keywordsToUpload = new List<string>();
+	//	//	foreach (string keyword in detectedKeywords)
+	//	//	{
+	//	//		if (ViolationTracker.CanSendReport(keyword))
+	//	//		{
+	//	//			keywordsToUpload.Add(keyword);
+	//	//		}
+	//	//	}
+	//	//	if (keywordsToUpload.Count == 0)
+	//	//	{
+	//	//		return;
+	//	//	}
+	//	//	if (!studentId.HasValue || !examId.HasValue)
+	//	//	{
+	//	//		try
+	//	//		{
+	//	//			if (mainWindow != null)
+	//	//			{
+	//	//				if (!studentId.HasValue && mainWindow.student != null && mainWindow.student.StudentId > 0)
+	//	//				{
+	//	//					studentId = mainWindow.student.StudentId;
+	//	//				}
+	//	//				if (!examId.HasValue && mainWindow.examId > 0)
+	//	//				{
+	//	//					examId = mainWindow.examId;
+	//	//				}
+	//	//			}
+	//	//		}
+	//	//		catch
+	//	//		{
+	//	//		}
+	//	//	}
+	//	//	if (string.IsNullOrEmpty(violateHost) || !studentId.HasValue || !examId.HasValue)
+	//	//	{
+	//	//		return;
+	//	//	}
+	//	//	byte[] screenshotBytes = await GetScreenshotAsync();
+	//	//	if (screenshotBytes == null)
+	//	//	{
+	//	//		return;
+	//	//	}
+	//	//	string keywordsString = string.Join(", ", keywordsToUpload);
+	//	//	string violateDescription = keywordsString;
+	//	//	await SendViolateReportToServer(violateDescription, screenshotBytes);
+	//	//	foreach (string keyword2 in keywordsToUpload)
+	//	//	{
+	//	//		ViolationTracker.MarkReportSent(keyword2);
+	//	//	}
+	//	//}
+	//	//catch (Exception)
+	//	//{
+	//	//}
+	//	return;
+ //   }
 
-	private async Task SendViolateReportToServer(string violateDescription, byte[] screenshotBytes)
-	{
-		try
-		{
-			string apiEndpoint = violateHost + "/exam/init-violate";
-			string boundary = "----WebKitFormBoundary" + Guid.NewGuid().ToString("N");
-			using HttpClient httpClient = new HttpClient();
-			MultipartFormDataContent multipartContent = new MultipartFormDataContent(boundary);
-			StringContent studentIdContent = new StringContent(studentId.Value.ToString());
-			multipartContent.Add(studentIdContent, "studentId");
-			StringContent examIdContent = new StringContent(examId.Value.ToString());
-			multipartContent.Add(examIdContent, "examId");
-			StringContent descriptionContent = new StringContent(violateDescription);
-			multipartContent.Add(descriptionContent, "violateDescription");
-			ByteArrayContent imageContent = new ByteArrayContent(screenshotBytes);
-			imageContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
-			multipartContent.Add(imageContent, "image", "ai_violation_screenshot.jpg");
-			HttpResponseMessage response = await httpClient.PostAsync(apiEndpoint, multipartContent);
-			if (!response.IsSuccessStatusCode)
-			{
-				await response.Content.ReadAsStringAsync();
-			}
-		}
-		catch (Exception)
-		{
-			throw;
-		}
-	}
+	//private async Task SendViolateReportToServer(string violateDescription, byte[] screenshotBytes)
+	//{
+	//	//try
+	//	//{
+	//	//	string apiEndpoint = violateHost + "/exam/init-violate";
+	//	//	string boundary = "----WebKitFormBoundary" + Guid.NewGuid().ToString("N");
+	//	//	using HttpClient httpClient = new HttpClient();
+	//	//	MultipartFormDataContent multipartContent = new MultipartFormDataContent(boundary);
+	//	//	StringContent studentIdContent = new StringContent(studentId.Value.ToString());
+	//	//	multipartContent.Add(studentIdContent, "studentId");
+	//	//	StringContent examIdContent = new StringContent(examId.Value.ToString());
+	//	//	multipartContent.Add(examIdContent, "examId");
+	//	//	StringContent descriptionContent = new StringContent(violateDescription);
+	//	//	multipartContent.Add(descriptionContent, "violateDescription");
+	//	//	ByteArrayContent imageContent = new ByteArrayContent(screenshotBytes);
+	//	//	imageContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+	//	//	multipartContent.Add(imageContent, "image", "ai_violation_screenshot.jpg");
+	//	//	HttpResponseMessage response = await httpClient.PostAsync(apiEndpoint, multipartContent);
+	//	//	if (!response.IsSuccessStatusCode)
+	//	//	{
+	//	//		await response.Content.ReadAsStringAsync();
+	//	//	}
+	//	//}
+	//	//catch (Exception)
+	//	//{
+	//	//	throw;
+	//	//}
+	//	return;
+ //   }
 
 	private async Task<byte[]> GetScreenshotAsync()
 	{

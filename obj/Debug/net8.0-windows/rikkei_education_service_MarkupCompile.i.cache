@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 2121644956531
 rikkei_education_service.LockScreen.xaml;rikkei_education_service.LoginWindow.xaml;rikkei_education_service.MainWindow.xaml;rikkei_education_service.TermsOfUse.xaml;
 
-True
+False
 

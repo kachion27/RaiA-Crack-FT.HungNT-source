@@ -19,11 +19,16 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="donata.jpg" />
+  </ItemGroup>
+
   <!-- ============================= -->
   <!-- 🖼️  KHAI BÁO CÁC TÀI NGUYÊN HÌNH ẢNH -->
   <!-- ============================= -->
   <ItemGroup>
     <!-- Icon của app -->
+    <Resource Include="donata.jpg" />
     <Resource Include="resources\images\icon\icon.ico" />
 
     <!-- Hình ảnh trong giao diện -->

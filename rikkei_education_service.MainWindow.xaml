@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:rikkei_education_service"
         Icon="/Resources/Images/icon/icon.ico"
-        Title="[CRACK RIKKEIOS] ĐÃ ĐƯỢC BẺ KHÓA TRUY CẬP | Hack Dev By Nhu Dang KOCHO Ft.Hung Nguyen"
+        Title="[CRACK RIKKEIOS] ĐÃ ĐƯỢC BẺ KHÓA TRUY CẬP | Hack Dev By Nhu Dang KOCHO Ft.HungNT"
         Height="790" Width="900"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
@@ -88,10 +88,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,20">
-            <TextBlock Text="[ CRACK RIKKEIOS ] ĐÃ ĐƯỢC BẺ KHÓA TRUY CẬP | Hack Dev By Nhu Dang KOCHO Ft.Hung Nguyen - DONATE: MB 6807032007" 
+            <TextBlock Text="[ CRACK RIKKEIOS ] ĐÃ ĐƯỢC BẺ KHÓA TRUY CẬP | Hack Dev By Nhu Dang KOCHO Ft.HungNT" 
                        Foreground="{StaticResource TerminalCyan}" FontSize="12" HorizontalAlignment="Center" Margin="0,0,0,5" />
             <TextBlock FontSize="28" FontWeight="Bold" Foreground="{StaticResource TerminalGreen}" HorizontalAlignment="Center" Width="586" Text="[ RIKKEI EDUCATION SERVICE - RAIA LỎ ]" />
-            <TextBlock Text="INITIATING CRACK UNLOCK SEQUENCE CRACK BY: NHU DANG KOCHO Ft.Hung Nguyen - Version: 1.0.1 [insider]" 
+            <TextBlock Text="INITIATING CRACK UNLOCK SEQUENCE CRACK BY: NHU DANG KOCHO Ft.HungNT - Version: 1.0.3 [insider]" 
                        Foreground="{StaticResource TerminalGrey}" FontSize="14" HorizontalAlignment="Center" Margin="0,5,0,0" />
         </StackPanel>
 
@@ -127,9 +127,9 @@
                     </StackPanel>
 
                     <Button Name="LogoutButton" Content="SIGN OUT [EXIT]" Width="150" Height="30" Background="{StaticResource TerminalRed}" Foreground="#FFFFFFFF" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="0,10,0,20"/>
-                    <TextBlock Text="DONATE: MB BANK 6807032007" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" HorizontalAlignment="Center" FontSize="14" />
-                    <Border BorderBrush="{StaticResource TerminalGreen}" BorderThickness="1" Width="189" Height="204">
-                        <Image Source="pack://application:,,,/resources/images/donata.jpg" Width="168" Height="186" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" />
+                    <TextBlock Text="DONATE" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalCyan}" HorizontalAlignment="Center" FontSize="14" />
+                    <Border BorderBrush="{StaticResource TerminalGreen}" BorderThickness="1" Width="189" Height="188">
+                        <Image Source="pack://application:,,,/resources/images/donata.jpg" Width="189" Height="198" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" />
                     </Border>
                 </StackPanel>
             </Border>
@@ -188,7 +188,7 @@
                 <TextBlock Text="TODAY" Style="{StaticResource StatusTextStyle}" Foreground="{StaticResource TerminalGrey}" Margin="5,0,0,0" />
             </StackPanel>
         </Border>
-        <Label Content="Donate cho 2 ae tôi đi hihi ❤️" HorizontalAlignment="Left" Margin="62,502,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Lime" Height="48" Width="290" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Image Source="pack://application:,,,/resources/images/icon.png" Stretch="Fill" Grid.Row="1" Margin="518,283,59,32"/>
+        <Label Content="Donate cho 2 ae tôi đi hihi ❤️" HorizontalAlignment="Left" Margin="62,493,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="Lime" Height="48" Width="290" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Image Source="pack://application:,,,/resources/images/icon.png" Stretch="Fill" Grid.Row="1" Margin="498,283,45,34"/>
     </Grid>
 </Window>
